@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./css/Profile.css";
 import Img1 from "../img/IMG_1489 1.png";
 import Img2 from "../img/Vector 21 (Stroke).png";
@@ -13,7 +13,7 @@ import Img10 from "../img/Group 25.png";
 import Img11 from "../img/Group 1.png";
 import Img12 from "../img/Group 42.png";
 import Img13 from "../img/image 26.png";
-import Img14 from '../img/Ellipse 22.png'
+import Img14 from "../img/Ellipse 22.png";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { CiSearch } from "react-icons/ci";
 import { Slider } from "antd";
@@ -67,8 +67,47 @@ const marks: SliderMarks = {
 const Profile: React.FC = () => {
   const [name1, setName1] = useState("");
   const [network, setNetwork] = useState("Network");
-  const [allSumm, setAllSumm] = useState("0,0");
-  const [mlSumm, setMlSumm] = useState("0,0");
+  const [allSumm, setAllSumm] = useState(0.0);
+  const [mlSumm, setMlSumm] = useState(0.0);
+  const [bitcoin, setBitcoin] = useState(0.0201);
+  const [Etherium, setEtherium] = useState(0.1472);
+  const [BNB, setBNB] = useState(1.001);
+  const [solana, setSolana] = useState(2.35);
+  const [XRP, setXRP] = useState(78.687);
+  const [cardano, setCardano] = useState(15.42);
+  const [ totalSumm, setTotalSumm ] = useState(0)
+  useEffect(() => {
+    if (bitcoin === 0.0201) {
+      setTotalSumm(0)
+    } else if(bitcoin !== 0.0201) {
+      setTotalSumm(totalSumm + bitcoin)
+    }
+    else if (Etherium === 0.1472) {
+      setTotalSumm(totalSumm)
+    } else if(Etherium !== 0.1472) {
+      setTotalSumm(totalSumm + Etherium)
+    }
+    else if (BNB === 1.001) {
+      setTotalSumm(totalSumm)
+    } else if(BNB !== 1.001) {
+      setTotalSumm(totalSumm + BNB)
+    }
+    else if (solana === 2.35) {
+      setTotalSumm(totalSumm)
+    } else if(solana !== 2.35) {
+      setTotalSumm(totalSumm + solana)
+    }
+    else if (XRP === 78.687) {
+      setTotalSumm(totalSumm)
+    } else if(XRP === 78.687) {
+      setTotalSumm(totalSumm + XRP)
+    }
+    else if (cardano === 15.42) {
+      setTotalSumm(totalSumm)
+    } else if(cardano !== 15.42) {
+      setTotalSumm(totalSumm + cardano)
+    }
+  }, [])
   // const rangeInput = document.getElementById("myRange") as HTMLInputElement;
 
   // function resetSliderPosition() {
@@ -84,13 +123,111 @@ const Profile: React.FC = () => {
   }
 
   function openCrypto() {
-    const cryp = document.querySelector('.crypto_div') as HTMLDivElement
-    cryp.style.display = 'flex'
+    const cryp = document.querySelector(".crypto_div") as HTMLDivElement;
+    cryp.style.display = "flex";
   }
   function closeCrypto() {
-    const cryp = document.querySelector('.crypto_div') as HTMLDivElement
-    cryp.style.display = 'none'
+    const cryp = document.querySelector(".crypto_div") as HTMLDivElement;
+    cryp.style.display = "none";
   }
+
+  const handleSliderChange = (value: number) => {
+    console.log(value);
+    // setBitcoin(bitcoin + value);
+    if (value === 0) {
+      setBitcoin(0.0201);
+      // setTotalSumm(0)
+    } else if (value === 25) {
+      setBitcoin(0.0201 + 25);
+      // setTotalSumm(0.0201+25)
+    } else if (value === 50) {
+      setTotalSumm(0.0201+50)
+      // setBitcoin(0.0201 + 50);
+    } else if (value === 75) {
+      setTotalSumm(0.0201+75)
+      // setBitcoin(0.0201 + 75);
+    } else if (value === 100) {
+      setTotalSumm(0.0201+100)
+      // setBitcoin(0.0201 + 100);
+    }
+  };
+
+  const handleSliderChange2 = (value: number) => {
+    console.log(value);
+    // setEtherium(bitcoin + value);
+    if (value === 0) {
+      setEtherium(0.1472);
+    } else if (value === 25) {
+      setEtherium(0.1472 + 25);
+    } else if (value === 50) {
+      setEtherium(0.1472 + 50);
+    } else if (value === 75) {
+      setEtherium(0.1472 + 75);
+    } else if (value === 100) {
+      setEtherium(0.1472 + 100);
+    }
+  };
+  const handleSliderChange3 = (value: number) => {
+    console.log(value);
+    // setBNB(bitcoin + value);
+    if (value === 0) {
+      setBNB(1.001);
+    } else if (value === 25) {
+      setBNB(1.001 + 25);
+    } else if (value === 50) {
+      setBNB(1.001 + 50);
+    } else if (value === 75) {
+      setBNB(1.001 + 75);
+    } else if (value === 100) {
+      setBNB(1.001 + 100);
+    }
+  };
+  
+  const handleSliderChange4 = (value: number) => {
+    console.log(value);
+    // setSolana(bitcoin + value);
+    if (value === 0) {
+      setSolana(2.35);
+    } else if (value === 25) {
+      setSolana(2.35 + 25);
+    } else if (value === 50) {
+      setSolana(2.35 + 50);
+    } else if (value === 75) {
+      setSolana(2.35 + 75);
+    } else if (value === 100) {
+      setSolana(2.35 + 100);
+    }
+  };
+  const handleSliderChange5 = (value: number) => {
+    console.log(value);
+    // setXRP(bitcoin + value);
+    if (value === 0) {
+      setXRP(78.687);
+    } else if (value === 25) {
+      setXRP(78.687 + 25);
+    } else if (value === 50) {
+      setXRP(78.687 + 50);
+    } else if (value === 75) {
+      setXRP(78.687 + 75);
+    } else if (value === 100) {
+      setXRP(78.687 + 100);
+    }
+  };
+  const handleSliderChange6 = (value: number) => {
+    console.log(value);
+    // setXRP(bitcoin + value);
+    if (value === 0) {
+      setCardano(15.42);
+    } else if (value === 25) {
+      setCardano(15.42 + 25);
+    } else if (value === 50) {
+      setCardano(15.42 + 50);
+    } else if (value === 75) {
+      setCardano(15.42 + 75);
+    } else if (value === 100) {
+      setCardano(15.42 + 100);
+    }
+  };
   return (
     <div style={{ background: "#000" }}>
       <div className="crypto_div">
@@ -239,10 +376,10 @@ const Profile: React.FC = () => {
               <h2>24.55 BNB</h2>
               <p>($5,644.7815)</p>
             </div>
-            <p className='You_reci'>(You receive)</p>
+            <p className="You_reci">(You receive)</p>
             <div className="image_bit">
-                <h1>$</h1>
-                <h2>37,748.2794</h2>
+              <h1>$</h1>
+              <h2>37,748.2794</h2>
             </div>
             <div className="showMore">
               <div className="line"></div>
@@ -471,12 +608,18 @@ const Profile: React.FC = () => {
                 </div>
               </div>
               <div className="Slider_range_pr">
-                <Slider marks={marks} step={75} defaultValue={0} />
+                <Slider
+                  id="markk"
+                  onChange={handleSliderChange}
+                  marks={marks}
+                  step={75}
+                  defaultValue={0}
+                />
               </div>
               {/* <input type="range" id="myRange" min={0} max={4} /> */}
               <div className="nol_pr">
                 <p>max</p>
-                <h1>0</h1>
+                <h1>{bitcoin}</h1>
               </div>
             </div>
             <div className="portfolios_divs_pr">
@@ -497,12 +640,17 @@ const Profile: React.FC = () => {
                 </div>
               </div>
               <div className="Slider_range_pr">
-                <Slider marks={marks} step={75} defaultValue={0} />
+                <Slider
+                  marks={marks}
+                  onChange={handleSliderChange2}
+                  step={75}
+                  defaultValue={0}
+                />
               </div>
               {/* <input type="range" id="myRange" min={0} max={4} /> */}
               <div className="nol_pr">
                 <p>max</p>
-                <h1>0</h1>
+                <h1>{Etherium}</h1>
               </div>
             </div>
             <div className="portfolios_divs_pr">
@@ -523,12 +671,14 @@ const Profile: React.FC = () => {
                 </div>
               </div>
               <div className="Slider_range_pr">
-                <Slider marks={marks} step={75} defaultValue={0} />
+                <Slider marks={marks}
+                  onChange={handleSliderChange3}
+                  step={75} defaultValue={0} />
               </div>
               {/* <input type="range" id="myRange" min={0} max={4} /> */}
               <div className="nol_pr">
                 <p>max</p>
-                <h1>0</h1>
+                <h1>{BNB}</h1>
               </div>
             </div>
             <div className="portfolios_divs_pr">
@@ -549,12 +699,14 @@ const Profile: React.FC = () => {
                 </div>
               </div>
               <div className="Slider_range_pr">
-                <Slider marks={marks} step={75} defaultValue={0} />
+                <Slider
+                  onChange={handleSliderChange4}
+                  marks={marks} step={75} defaultValue={0} />
               </div>
               {/* <input type="range" id="myRange" min={0} max={4} /> */}
               <div className="nol_pr">
                 <p>max</p>
-                <h1>0</h1>
+                <h1>{solana}</h1>
               </div>
             </div>
             <div className="portfolios_divs_pr">
@@ -571,16 +723,18 @@ const Profile: React.FC = () => {
                 <img src={Img6} alt="" />
                 <div className="text_portfol_pr">
                   <p>XRP (XRP)</p>
-                  <h1>78.6870</h1>
+                  <h1>78.687</h1>
                 </div>
               </div>
               <div className="Slider_range_pr">
-                <Slider marks={marks} step={75} defaultValue={0} />
+                <Slider
+                  onChange={handleSliderChange5}
+                  marks={marks} step={75} defaultValue={0} />
               </div>
               {/* <input type="range" id="myRange" min={0} max={4} /> */}
               <div className="nol_pr">
                 <p>max</p>
-                <h1>0</h1>
+                <h1>{XRP}</h1>
               </div>
             </div>
             <div className="portfolios_divs_pr">
@@ -601,90 +755,14 @@ const Profile: React.FC = () => {
                 </div>
               </div>
               <div className="Slider_range_pr">
-                <Slider marks={marks} step={75} defaultValue={0} />
+                <Slider marks={marks}
+                  onChange={handleSliderChange6}
+                  step={75} defaultValue={0} />
               </div>
               {/* <input type="range" id="myRange" min={0} max={4} /> */}
               <div className="nol_pr">
                 <p>max</p>
-                <h1>0</h1>
-              </div>
-            </div>
-            <div className="portfolios_divs_pr">
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  width: "20%",
-                  marginLeft: 10,
-                }}
-                className="div_pr"
-              >
-                <img src={Img8} alt="" />
-                <div className="text_portfol_pr">
-                  <p>Bitcoin (BTS)</p>
-                  <h1>0.0201</h1>
-                </div>
-              </div>
-              <div className="Slider_range_pr">
-                <Slider marks={marks} step={75} defaultValue={0} />
-              </div>
-              {/* <input type="range" id="myRange" min={0} max={4} /> */}
-              <div className="nol_pr">
-                <p>max</p>
-                <h1>0</h1>
-              </div>
-            </div>
-            <div className="portfolios_divs_pr">
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  width: "20%",
-                  marginLeft: 10,
-                }}
-                className="div_pr"
-              >
-                <img src={Img9} alt="" />
-                <div className="text_portfol_pr">
-                  <p>Bitcoin (BTS)</p>
-                  <h1>0.0201</h1>
-                </div>
-              </div>
-              <div className="Slider_range_pr">
-                <Slider marks={marks} step={75} defaultValue={0} />
-              </div>
-              {/* <input type="range" id="myRange" min={0} max={4} /> */}
-              <div className="nol_pr">
-                <p>max</p>
-                <h1>0</h1>
-              </div>
-            </div>
-            <div className="portfolios_divs_pr">
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  width: "20%",
-                  marginLeft: 10,
-                }}
-                className="div_pr"
-              >
-                <img src={Img10} alt="" />
-                <div className="text_portfol_pr">
-                  <p>Bitcoin (BTS)</p>
-                  <h1>0.0201</h1>
-                </div>
-              </div>
-              <div className="Slider_range_pr">
-                <Slider marks={marks} step={75} defaultValue={0} />
-              </div>
-              {/* <input type="range" id="myRange" min={0} max={4} /> */}
-              <div className="nol_pr">
-                <p>max</p>
-                <h1>0</h1>
+                <h1>{cardano}</h1>
               </div>
             </div>
           </div>
@@ -697,7 +775,7 @@ const Profile: React.FC = () => {
             <input type="text" value={name1} />
 
             <p>(Total amount)</p>
-            <input type="text" value={"$" + allSumm} />
+            <input type="text" value={"$" + totalSumm} />
 
             <p>(Convert to)</p>
             <input type="text" value={network} />
@@ -706,7 +784,7 @@ const Profile: React.FC = () => {
             <br />
             <input type="text" value={"$" + mlSumm} />
             <p>Add adress</p>
-            <button  onClick={() => openCrypto()}>
+            <button onClick={() => openCrypto()}>
               <img src={Img11} alt="" />
             </button>
           </div>
