@@ -8,7 +8,7 @@
 .Main_pr {
     width: 50%;
     background: #878787;
-    border-radius: 80px;
+    border-radius: 90px;
     display: flex;
     height: 170px;
     overflow: hidden;
@@ -156,6 +156,7 @@
     }
 }
 
+.Portfolio_pr2,
 .Portfolio_pr,
 .Network_pr {
     width: 82%;
@@ -272,6 +273,7 @@
     margin-top: -95px;
     border-radius: 10px;
     padding: 5px;
+    /* margin-left: 10px; */
 }
 
 .mini_txt_pr {
@@ -400,6 +402,10 @@
     padding-right: 100px;
 }
 
+.div_pr {
+    justify-content: start !important;
+}
+
 .text_portfol_pr p {
     line-height: 0;
     margin-top: 15px;
@@ -438,7 +444,8 @@
     }
 
     .portfolio_max_div_pr2 {
-        height: 600px;
+        min-height: 200px;
+        max-height: 600px;
         overflow: hidden;
         overflow-y: scroll !important;
     }
@@ -482,10 +489,13 @@
 
 @media(max-width: 814px) {
     .portfolios_divs_pr {
-        width: 85%;
+        width: 80%;
     }
     .Portfolio_pr {
-        width: 96%;
+        width: 90%;
+    }
+    .inp_pr input {
+        width: 100%;
     }
 }
 
@@ -505,5 +515,333 @@
     }
     .portfolios_divs_pr p {
         margin-left: 0px;
+    }
+}
+
+.Slider_range_pr {
+    width: 40%;
+    /* color: #3E3E3E; */
+}
+
+.nol_pr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    margin-left: 50px;
+}
+
+@media(max-width: 690px) {
+    .Slider_range_pr {
+        margin-left: 70px;
+        /* margin-right: 20px; */
+        width: 50%;
+    }
+}
+
+@media(max-width: 600px) {
+    .portfolios_divs_pr {
+        flex-wrap: wrap;
+    }
+    .portfolios_divs_pr {
+        height: auto;
+        border-radius: 20px;
+    }
+    .nol_pr {
+        width: 50%;
+        height: 30px;
+        margin: auto;
+        padding-bottom: 10px;
+    }
+    .div_pr {
+        width: 30% !important;
+    }
+    .text_portfol_pr {
+        margin-left: 10px;
+    }
+}
+
+@media(max-width: 560px){
+    .div_pr h1{
+        font-size: 20px;
+    }
+    .div_pr p {
+        font-size: 10px;
+    }
+    .div_pr {
+        width: 10% !important;
+    }
+    .portfolios_divs_pr {
+        height: 70px;
+    }
+    .nol_pr h1 {
+        font-size: 20px;
+    }
+    .nol_pr {
+        margin-top: 0;
+        height: 0;
+    }
+}
+
+@media(max-width: 420px) {
+    .Slider_range_pr {
+        width: 90%;
+        margin-left: 10px;
+    }
+    .portfolios_divs_pr{
+        width: 98%;
+        height: auto;
+        padding-top: 5px;
+        padding: 0;
+        padding-top: 3px;
+    }
+    .nol_pr {
+        margin: 0;
+        margin-left: 10px;
+        width: 20%;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+}
+
+.Portfolio_pr2 {
+    display: none;
+}
+
+.crypto_div {
+    position: fixed;
+    top: 100px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.Cryp_div2 {
+    background: linear-gradient(#BEBEBE, #E9E9E9);
+    width: 100%;
+    padding: 10px;
+    /* position: relative; */
+    /* border-radius: 10px; */
+}
+
+.Crypto {
+    width: 30%;
+    height: auto;
+    max-height: 760px;
+    overflow: hidden;
+    overflow-y: scroll !important;
+    /* padding-left: 30px; */
+    padding-right: 25px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.Crypto::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.Crypto::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 5px grey;  */
+  border-radius: 10px;
+}
+ 
+/* Handle */
+.Crypto::-webkit-scrollbar-thumb {
+  background: #878787; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.Crypto::-webkit-scrollbar-thumb:hover {
+  background: gray; 
+}
+
+.bitcoin_pr {
+    width: 65%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.bitcoin_pr img {
+    margin-right: 10px;
+}
+
+.Cryp_div2 h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.Cryp_div2 p{
+    font-family: 'Courier New', Courier, monospace;
+    color: #3E3E3E;
+    font-weight: 500;
+}
+
+.image_bit {
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image_bit h1 {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.You_reci {
+    height: 0;
+    line-height: 0;
+}
+
+.showMore {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.line {
+    width: 80%;
+    border-bottom: 1px solid black;
+}
+.showMore p {
+    color: black;
+}
+
+.rate_pr {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    /* align-items: center; */
+}
+
+.rate_mini p {
+    height: 3px;
+}
+
+.confirm_swap {
+    width: 100%;
+    height: 70px;
+    background: #000;
+    color: white;
+    font-size: 30px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.close_crypto {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    /* margin-left: 95%; */
+    font-size: 40px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.crypto_div {
+    display: none;
+    z-index: 9999;
+}
+
+@media(max-width: 1766px) {
+    .bitcoin_pr {
+        width: 70%;
+    }
+}
+
+@media(max-width: 1650px) {
+    .bitcoin_pr {
+        width: 80%;
+    }
+}
+
+@media(max-width: 1450px) {
+    .Crypto {
+        width: 40%;
+    }
+}
+
+@media(max-width: 1090px){
+    .Crypto {
+        width: 45%;
+    }
+}
+
+@media(max-width: 970px) {
+    .Crypto {
+        width: 50%;
+    }
+}
+
+@media(max-width: 860px) {
+    .Crypto {
+        width: 60%;
+    }
+}
+
+@media(max-width: 726px) {
+    .Crypto {
+        width: 65%;
+        margin-top: 0;
+        top: 0;
+        height: 500px;
+    }
+    .crypto_div {
+        top: 50px;
+    }
+    .bitcoin_pr h2{
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 615px){
+    .Crypto {
+        width: 80%;
+    }
+}
+
+@media(max-width: 500px) {
+    .Crypto{
+        width: 85%;
+    }
+}
+
+@media(max-width: 475px) {
+    .Cryp_div2 h2 {
+        font-size: 17px;
+    }
+    .Cryp_div2 p{
+        font-size: 10px;
+    }
+}
+
+@media(max-width: 1300px) {
+    .image_bit {
+        width: 40%;
+    }
+}
+
+@media(max-width: 1130px) {
+    .image_bit {
+        width: 45%;
+    }
+    .Crypto {
+        top: 0;
+        height: 600px;
+    }
+}
+
+@media(max-width: 370px) {
+    .image_bit {
+        width: 50%;
     }
 }
