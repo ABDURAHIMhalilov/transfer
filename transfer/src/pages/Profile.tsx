@@ -579,7 +579,7 @@ const Profile: React.FC = () => {
       </div>
       <div className="Portfolio_pr2">
         <div className="p_text_pr">
-          <h1>PORTFOLIO1</h1>
+          <h1>PORTFOLIO</h1>
           <FaArrowLeftLong size={25} />
         </div>
         <div className="porfolio_m_pr2">
@@ -792,7 +792,7 @@ const Profile: React.FC = () => {
       </div>
       <div className="Portfolio_pr">
         <div className="p_text_pr">
-          <h1>PORTFOLIO2</h1>
+          <h1>PORTFOLIO</h1>
           <FaArrowLeftLong size={25} />
         </div>
         <div className="porfolio_m_pr">
