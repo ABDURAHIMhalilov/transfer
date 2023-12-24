@@ -424,8 +424,8 @@ const Profile: React.FC = () => {
             <img src={Img1} alt="" />
           </div>
           <div className="texts_pr">
-            <h1>Wallet</h1>
-            <h1>0xE07eA.....519BF</h1>
+            <h1>Wallet:</h1>
+            <h2>0xE07eA.....519BF</h2>
             <div className="texts2_pr">
               <p>Change main wallet</p>
               <p>Add wallet</p>
@@ -437,7 +437,7 @@ const Profile: React.FC = () => {
           <img src={Img2} alt="" />
           <div className="texts3_pr">
             <div className="texts4_pr">
-              <h1>$2,361</h1>
+              <h2>$2,361</h2>
               <h3>+12.3%</h3>
             </div>
             <p>(month)</p>
