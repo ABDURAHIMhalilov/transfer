@@ -23,35 +23,35 @@ import { IoMdClose } from "react-icons/io";
 const marks: SliderMarks = {
   0: {
     style: {
-      color: "#3E3E3E",
+      color: "#FFFFFF99",
       fontWeight: "100",
     },
     label: <strong>0%</strong>,
   },
   25: {
     style: {
-      color: "#3E3E3E",
+      color: "#FFFFFF99",
       fontWeight: "100",
     },
     label: <strong>25%</strong>,
   },
   50: {
     style: {
-      color: "#3E3E3E",
+      color: "#FFFFFF99",
       fontWeight: "100",
     },
     label: <strong>50%</strong>,
   },
   75: {
     style: {
-      color: "#3E3E3E",
+      color: "#FFFFFF99",
       fontWeight: "100",
     },
     label: <strong>75%</strong>,
   },
   100: {
     style: {
-      color: "#3E3E3E",
+      color: "#FFFFFF99",
       fontWeight: "100",
     },
     label: <strong>100%</strong>,
@@ -75,39 +75,34 @@ const Profile: React.FC = () => {
   const [solana, setSolana] = useState(2.35);
   const [XRP, setXRP] = useState(78.687);
   const [cardano, setCardano] = useState(15.42);
-  const [ totalSumm, setTotalSumm ] = useState(0)
+  const [totalSumm, setTotalSumm] = useState(0);
   useEffect(() => {
     if (bitcoin === 0.0201) {
-      setTotalSumm(0)
-    } else if(bitcoin !== 0.0201) {
-      setTotalSumm(totalSumm + bitcoin)
+      setTotalSumm(0);
+    } else if (bitcoin !== 0.0201) {
+      setTotalSumm(totalSumm + bitcoin);
+    } else if (Etherium === 0.1472) {
+      setTotalSumm(totalSumm);
+    } else if (Etherium !== 0.1472) {
+      setTotalSumm(totalSumm + Etherium);
+    } else if (BNB === 1.001) {
+      setTotalSumm(totalSumm);
+    } else if (BNB !== 1.001) {
+      setTotalSumm(totalSumm + BNB);
+    } else if (solana === 2.35) {
+      setTotalSumm(totalSumm);
+    } else if (solana !== 2.35) {
+      setTotalSumm(totalSumm + solana);
+    } else if (XRP === 78.687) {
+      setTotalSumm(totalSumm);
+    } else if (XRP === 78.687) {
+      setTotalSumm(totalSumm + XRP);
+    } else if (cardano === 15.42) {
+      setTotalSumm(totalSumm);
+    } else if (cardano !== 15.42) {
+      setTotalSumm(totalSumm + cardano);
     }
-    else if (Etherium === 0.1472) {
-      setTotalSumm(totalSumm)
-    } else if(Etherium !== 0.1472) {
-      setTotalSumm(totalSumm + Etherium)
-    }
-    else if (BNB === 1.001) {
-      setTotalSumm(totalSumm)
-    } else if(BNB !== 1.001) {
-      setTotalSumm(totalSumm + BNB)
-    }
-    else if (solana === 2.35) {
-      setTotalSumm(totalSumm)
-    } else if(solana !== 2.35) {
-      setTotalSumm(totalSumm + solana)
-    }
-    else if (XRP === 78.687) {
-      setTotalSumm(totalSumm)
-    } else if(XRP === 78.687) {
-      setTotalSumm(totalSumm + XRP)
-    }
-    else if (cardano === 15.42) {
-      setTotalSumm(totalSumm)
-    } else if(cardano !== 15.42) {
-      setTotalSumm(totalSumm + cardano)
-    }
-  }, [])
+  }, []);
   // const rangeInput = document.getElementById("myRange") as HTMLInputElement;
 
   // function resetSliderPosition() {
@@ -138,16 +133,16 @@ const Profile: React.FC = () => {
       setBitcoin(0.0201);
       // setTotalSumm(0)
     } else if (value === 25) {
-      setBitcoin(0.0201 + 25);
+      setBitcoin(0.0201 * 25);
       // setTotalSumm(0.0201+25)
     } else if (value === 50) {
-      setTotalSumm(0.0201+50)
+      setTotalSumm(0.0201 * 50);
       // setBitcoin(0.0201 + 50);
     } else if (value === 75) {
-      setTotalSumm(0.0201+75)
+      setTotalSumm(0.0201 * 75);
       // setBitcoin(0.0201 + 75);
     } else if (value === 100) {
-      setTotalSumm(0.0201+100)
+      setTotalSumm(0.0201 * 100);
       // setBitcoin(0.0201 + 100);
     }
   };
@@ -158,13 +153,13 @@ const Profile: React.FC = () => {
     if (value === 0) {
       setEtherium(0.1472);
     } else if (value === 25) {
-      setEtherium(0.1472 + 25);
+      setEtherium(0.1472 * 25);
     } else if (value === 50) {
-      setEtherium(0.1472 + 50);
+      setEtherium(0.1472 * 50);
     } else if (value === 75) {
-      setEtherium(0.1472 + 75);
+      setEtherium(0.1472 * 75);
     } else if (value === 100) {
-      setEtherium(0.1472 + 100);
+      setEtherium(0.1472 * 100);
     }
   };
   const handleSliderChange3 = (value: number) => {
@@ -182,7 +177,7 @@ const Profile: React.FC = () => {
       setBNB(1.001 + 100);
     }
   };
-  
+
   const handleSliderChange4 = (value: number) => {
     console.log(value);
     // setSolana(bitcoin + value);
@@ -400,7 +395,9 @@ const Profile: React.FC = () => {
               <p>(Network cost)</p>
               <p>$22.5</p>
             </div>
-            <button className="confirm_swap">CONFIRM SWAP</button>
+            <button className="confirm_swap" onClick={() => closeCrypto()}>
+              CONFIRM SWAP
+            </button>
           </div>
         </div>
       </div>
@@ -448,6 +445,7 @@ const Profile: React.FC = () => {
         <h1>Networks</h1>
         <div className="cards_pr">
           <div
+            style={name1 == "Etherium" ? { background: "#BFBFBF" } : {}}
             className="card_pr"
             onClick={() => {
               openPortfolioFull();
@@ -465,6 +463,7 @@ const Profile: React.FC = () => {
           </div>
           <div
             className="card_pr"
+            style={name1 == "Arbitrum" ? { background: "#BFBFBF" } : {}}
             onClick={() => {
               openPortfolioFull();
               setName1("Arbitrum");
@@ -481,6 +480,7 @@ const Profile: React.FC = () => {
           </div>
           <div
             className="card_pr"
+            style={name1 == "ZkSync" ? { background: "#BFBFBF" } : {}}
             onClick={() => {
               openPortfolioFull();
               setName1("ZkSync");
@@ -497,6 +497,7 @@ const Profile: React.FC = () => {
           </div>
           <div
             className="card_pr"
+            style={name1 == "Polygon" ? { background: "#BFBFBF" } : {}}
             onClick={() => {
               openPortfolioFull();
               setName1("Polygon");
@@ -513,6 +514,7 @@ const Profile: React.FC = () => {
           </div>
           <div
             className="card_pr"
+            style={name1 == "BSC" ? { background: "#BFBFBF" } : {}}
             onClick={() => {
               openPortfolioFull();
               setName1("BSC");
@@ -529,6 +531,7 @@ const Profile: React.FC = () => {
           </div>
           <div
             className="card_pr"
+            style={name1 == "Base" ? { background: "#BFBFBF" } : {}}
             onClick={() => {
               openPortfolioFull();
               setName1("Base");
@@ -545,6 +548,7 @@ const Profile: React.FC = () => {
           </div>
           <div
             className="card_pr"
+            style={name1 == "Optimism" ? { background: "#BFBFBF" } : {}}
             onClick={() => {
               openPortfolioFull();
               setName1("Optimism");
@@ -561,6 +565,14 @@ const Profile: React.FC = () => {
           </div>
           <div
             className="card_pr"
+            style={
+              name1 == "Linea"
+                ? {
+                    background:
+                      "linear-gradient(263deg, #E9E9E9 5.9%, #BFBFBF 93.59%)",
+                  }
+                : {}
+            }
             onClick={() => {
               openPortfolioFull();
               setName1("Linea");
@@ -586,21 +598,12 @@ const Profile: React.FC = () => {
           <div className="portfolio_max_div_pr2">
             <div className="inp_pr">
               <CiSearch className="close_icon" />
-              <input type="text" />
+              <input placeholder="Search" type="text" />
               <p>All the zero</p>
               <p>All the max</p>
             </div>
             <div className="portfolios_divs_pr">
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  width: "20%",
-                  marginLeft: 10,
-                }}
-                className="div_pr"
-              >
+              <div className="div_pr">
                 <img src={Img9} alt="" />
                 <div className="text_portfol_pr">
                   <p>Bitcoin (BTS)</p>
@@ -623,16 +626,7 @@ const Profile: React.FC = () => {
               </div>
             </div>
             <div className="portfolios_divs_pr">
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  width: "20%",
-                  marginLeft: 10,
-                }}
-                className="div_pr"
-              >
+              <div className="div_pr">
                 <img src={Img3} alt="" />
                 <div className="text_portfol_pr">
                   <p>Etherium (ETH)</p>
@@ -654,16 +648,7 @@ const Profile: React.FC = () => {
               </div>
             </div>
             <div className="portfolios_divs_pr">
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  width: "20%",
-                  marginLeft: 10,
-                }}
-                className="div_pr"
-              >
+              <div className="div_pr">
                 <img src={Img4} alt="" />
                 <div className="text_portfol_pr">
                   <p>BNB (BNB)</p>
@@ -671,9 +656,12 @@ const Profile: React.FC = () => {
                 </div>
               </div>
               <div className="Slider_range_pr">
-                <Slider marks={marks}
+                <Slider
+                  marks={marks}
                   onChange={handleSliderChange3}
-                  step={75} defaultValue={0} />
+                  step={75}
+                  defaultValue={0}
+                />
               </div>
               {/* <input type="range" id="myRange" min={0} max={4} /> */}
               <div className="nol_pr">
@@ -682,16 +670,7 @@ const Profile: React.FC = () => {
               </div>
             </div>
             <div className="portfolios_divs_pr">
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  width: "20%",
-                  marginLeft: 10,
-                }}
-                className="div_pr"
-              >
+              <div className="div_pr">
                 <img src={Img5} alt="" />
                 <div className="text_portfol_pr">
                   <p>Solana (SOL)</p>
@@ -701,7 +680,10 @@ const Profile: React.FC = () => {
               <div className="Slider_range_pr">
                 <Slider
                   onChange={handleSliderChange4}
-                  marks={marks} step={75} defaultValue={0} />
+                  marks={marks}
+                  step={75}
+                  defaultValue={0}
+                />
               </div>
               {/* <input type="range" id="myRange" min={0} max={4} /> */}
               <div className="nol_pr">
@@ -710,16 +692,7 @@ const Profile: React.FC = () => {
               </div>
             </div>
             <div className="portfolios_divs_pr">
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  width: "20%",
-                  marginLeft: 10,
-                }}
-                className="div_pr"
-              >
+              <div className="div_pr">
                 <img src={Img6} alt="" />
                 <div className="text_portfol_pr">
                   <p>XRP (XRP)</p>
@@ -729,7 +702,10 @@ const Profile: React.FC = () => {
               <div className="Slider_range_pr">
                 <Slider
                   onChange={handleSliderChange5}
-                  marks={marks} step={75} defaultValue={0} />
+                  marks={marks}
+                  step={75}
+                  defaultValue={0}
+                />
               </div>
               {/* <input type="range" id="myRange" min={0} max={4} /> */}
               <div className="nol_pr">
@@ -738,16 +714,7 @@ const Profile: React.FC = () => {
               </div>
             </div>
             <div className="portfolios_divs_pr">
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  width: "20%",
-                  marginLeft: 10,
-                }}
-                className="div_pr"
-              >
+              <div className="div_pr">
                 <img src={Img7} alt="" />
                 <div className="text_portfol_pr">
                   <p>Cardano (ADA)</p>
@@ -755,9 +722,12 @@ const Profile: React.FC = () => {
                 </div>
               </div>
               <div className="Slider_range_pr">
-                <Slider marks={marks}
+                <Slider
+                  marks={marks}
                   onChange={handleSliderChange6}
-                  step={75} defaultValue={0} />
+                  step={75}
+                  defaultValue={0}
+                />
               </div>
               {/* <input type="range" id="myRange" min={0} max={4} /> */}
               <div className="nol_pr">
@@ -783,7 +753,16 @@ const Profile: React.FC = () => {
             <input type="text" value="Token" />
             <br />
             <input type="text" value={"$" + mlSumm} />
-            <p>Add adress</p>
+            <a
+              style={{
+                color: "black",
+                marginTop: "30px",
+                paddingBottom: "30px",
+              }}
+              href=""
+            >
+              <p style={{ textAlign: "right", color: "#000000" }}>Add adress</p>
+            </a>
             <button onClick={() => openCrypto()}>
               <img src={Img11} alt="" />
             </button>

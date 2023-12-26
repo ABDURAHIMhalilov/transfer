@@ -7,6 +7,7 @@ import NoPage from "./NoPage";
 
 function router() {
   return (
+    <div className="blackk">
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Main />} />
@@ -15,6 +16,7 @@ function router() {
           <Route path="*" element={<NoPage />} />
       </Routes>
     </BrowserRouter>
+    </div>
   );
 }
 
