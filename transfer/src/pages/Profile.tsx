@@ -131,20 +131,20 @@ const Profile: React.FC = () => {
     // setBitcoin(bitcoin + value);
     if (value === 0) {
       setBitcoin(0.0201);
-       setTotalSumm(0)
+      setTotalSumm(0);
       setBitcoin(0.0201 * 0);
     } else if (value === 25) {
       setBitcoin(0.0201 * 25);
-       setTotalSumm(0.0201 * 25)
+      setTotalSumm(0.0201 * 25);
     } else if (value === 50) {
       setBitcoin(0.0201 * 50);
-      setTotalSumm(0.0201 * 50)
+      setTotalSumm(0.0201 * 50);
     } else if (value === 75) {
       setBitcoin(0.0201 * 75);
-      setTotalSumm(0.0201 * 75)
+      setTotalSumm(0.0201 * 75);
     } else if (value === 100) {
       setBitcoin(0.0201 * 100);
-      setTotalSumm(0.0201 * 100)
+      setTotalSumm(0.0201 * 100);
     }
   };
 
@@ -153,10 +153,10 @@ const Profile: React.FC = () => {
     // setEtherium(bitcoin + value);
     if (value === 0) {
       setEtherium(0.1472);
-      setTotalSumm(0)
+      setTotalSumm(0);
     } else if (value === 25) {
       setEtherium(0.1472 * 25);
-      setTotalSumm(0.1472 * 25)
+      setTotalSumm(0.1472 * 25);
     } else if (value === 50) {
       setEtherium(0.1472 * 50);
     } else if (value === 75) {
@@ -457,10 +457,16 @@ const Profile: React.FC = () => {
           >
             <img src={Img3} alt="" />
             <div className="texts5_pr">
-              <p style={name1 == "Etherium" ? { color: "#00000099" } : {}}>Etherium</p>
+              <p style={name1 == "Etherium" ? { color: "#00000099" } : {}}>
+                Etherium
+              </p>
               <div className="texts6_pr">
-                <h1 style={name1 == "Etherium" ? { color: "black" } : {}}>$1,642</h1>
-                <p style={name1 == "Etherium" ? { color: "#00000099" } : {}}>69.6%</p>
+                <h1 style={name1 == "Etherium" ? { color: "black" } : {}}>
+                  $1,642
+                </h1>
+                <p style={name1 == "Etherium" ? { color: "#00000099" } : {}}>
+                  69.6%
+                </p>
               </div>
             </div>
           </div>
@@ -474,10 +480,16 @@ const Profile: React.FC = () => {
           >
             <img src={Img4} alt="" />
             <div className="texts5_pr">
-              <p style={name1 == "Arbitrum" ? { color: "#00000099" } : {}}>Arbitrum</p>
+              <p style={name1 == "Arbitrum" ? { color: "#00000099" } : {}}>
+                Arbitrum
+              </p>
               <div className="texts6_pr">
-                <h1 style={name1 == "Arbitrum" ? { color: "black" } : {}}>$348</h1>
-                <p style={name1 == "Arbitrum" ? { color: "#00000099" } : {}}>69.6%</p>
+                <h1 style={name1 == "Arbitrum" ? { color: "black" } : {}}>
+                  $348
+                </h1>
+                <p style={name1 == "Arbitrum" ? { color: "#00000099" } : {}}>
+                  69.6%
+                </p>
               </div>
             </div>
           </div>
@@ -491,10 +503,16 @@ const Profile: React.FC = () => {
           >
             <img src={Img5} alt="" />
             <div className="texts5_pr">
-              <p style={name1 == "ZkSync" ? { color: "#00000099" } : {}}>ZkSync</p>
+              <p style={name1 == "ZkSync" ? { color: "#00000099" } : {}}>
+                ZkSync
+              </p>
               <div className="texts6_pr">
-                <h1 style={name1 == "ZkSync" ? { color: "black" } : {}}>$122</h1>
-                <p style={name1 == "ZkSync" ? { color: "#00000099" } : {}}>69.6%</p>
+                <h1 style={name1 == "ZkSync" ? { color: "black" } : {}}>
+                  $122
+                </h1>
+                <p style={name1 == "ZkSync" ? { color: "#00000099" } : {}}>
+                  69.6%
+                </p>
               </div>
             </div>
           </div>
@@ -508,10 +526,16 @@ const Profile: React.FC = () => {
           >
             <img src={Img10} alt="" />
             <div className="texts5_pr">
-              <p style={name1 == "Polygon" ? { color: "#00000099" } : {}}>Polygon</p>
+              <p style={name1 == "Polygon" ? { color: "#00000099" } : {}}>
+                Polygon
+              </p>
               <div className="texts6_pr">
-                <h1 style={name1 == "Polygon" ? { color: "black" } : {}}>$92</h1>
-                <p style={name1 == "Polygon" ? { color: "#00000099" } : {}}>69.6%</p>
+                <h1 style={name1 == "Polygon" ? { color: "black" } : {}}>
+                  $92
+                </h1>
+                <p style={name1 == "Polygon" ? { color: "#00000099" } : {}}>
+                  69.6%
+                </p>
               </div>
             </div>
           </div>
@@ -528,7 +552,9 @@ const Profile: React.FC = () => {
               <p style={name1 == "BSC" ? { color: "#00000099" } : {}}>BSC</p>
               <div className="texts6_pr">
                 <h1 style={name1 == "BSC" ? { color: "black" } : {}}>$56</h1>
-                <p style={name1 == "BSC" ? { color: "#00000099" } : {}}>69.6%</p>
+                <p style={name1 == "BSC" ? { color: "#00000099" } : {}}>
+                  69.6%
+                </p>
               </div>
             </div>
           </div>
@@ -545,7 +571,9 @@ const Profile: React.FC = () => {
               <p style={name1 == "Base" ? { color: "#00000099" } : {}}>Base</p>
               <div className="texts6_pr">
                 <h1 style={name1 == "Base" ? { color: "black" } : {}}>$52</h1>
-                <p style={name1 == "Base" ? { color: "#00000099" } : {}}>69.6%</p>
+                <p style={name1 == "Base" ? { color: "#00000099" } : {}}>
+                  69.6%
+                </p>
               </div>
             </div>
           </div>
@@ -559,10 +587,16 @@ const Profile: React.FC = () => {
           >
             <img src={Img8} alt="" />
             <div className="texts5_pr">
-              <p style={name1 == "Optimism" ? { color: "#00000099" } : {}}>Optimism</p>
+              <p style={name1 == "Optimism" ? { color: "#00000099" } : {}}>
+                Optimism
+              </p>
               <div className="texts6_pr">
-                <h1 style={name1 == "Optimism" ? { color: "black" } : {}}>$37</h1>
-                <p style={name1 == "Optimism" ? { color: "#00000099" } : {}}>69.6%</p>
+                <h1 style={name1 == "Optimism" ? { color: "black" } : {}}>
+                  $37
+                </h1>
+                <p style={name1 == "Optimism" ? { color: "#00000099" } : {}}>
+                  69.6%
+                </p>
               </div>
             </div>
           </div>
@@ -583,10 +617,14 @@ const Profile: React.FC = () => {
           >
             <img src={Img10} alt="" />
             <div className="texts5_pr">
-              <p style={name1 == "Linea" ? { color: "#00000099" } : {}}>Linea</p>
+              <p style={name1 == "Linea" ? { color: "#00000099" } : {}}>
+                Linea
+              </p>
               <div className="texts6_pr">
                 <h1 style={name1 == "Linea" ? { color: "black" } : {}}>$12</h1>
-                <p style={name1 == "Linea" ? { color: "#00000099" } : {}}>69.6%</p>
+                <p style={name1 == "Linea" ? { color: "#00000099" } : {}}>
+                  69.6%
+                </p>
               </div>
             </div>
           </div>
@@ -625,7 +663,7 @@ const Profile: React.FC = () => {
               {/* <input type="range" id="myRange" min={0} max={4} /> */}
               <div className="nol_pr">
                 <p>max</p>
-                <h1>{bitcoin}</h1>
+                <h1>{bitcoin.toFixed(3)}</h1>
               </div>
             </div>
             <div className="portfolios_divs_pr">
@@ -647,7 +685,7 @@ const Profile: React.FC = () => {
               {/* <input type="range" id="myRange" min={0} max={4} /> */}
               <div className="nol_pr">
                 <p>max</p>
-                <h1>{Etherium}</h1>
+                <h1>{Etherium.toFixed(3)}</h1>
               </div>
             </div>
             <div className="portfolios_divs_pr">
@@ -669,7 +707,7 @@ const Profile: React.FC = () => {
               {/* <input type="range" id="myRange" min={0} max={4} /> */}
               <div className="nol_pr">
                 <p>max</p>
-                <h1>{BNB}</h1>
+                <h1>{BNB.toFixed(3)}</h1>
               </div>
             </div>
             <div className="portfolios_divs_pr">
@@ -691,7 +729,7 @@ const Profile: React.FC = () => {
               {/* <input type="range" id="myRange" min={0} max={4} /> */}
               <div className="nol_pr">
                 <p>max</p>
-                <h1>{solana}</h1>
+                <h1>{solana.toFixed(3)}</h1>
               </div>
             </div>
             <div className="portfolios_divs_pr">
@@ -713,7 +751,7 @@ const Profile: React.FC = () => {
               {/* <input type="range" id="myRange" min={0} max={4} /> */}
               <div className="nol_pr">
                 <p>max</p>
-                <h1>{XRP}</h1>
+                <h1>{XRP.toFixed(3)}</h1>
               </div>
             </div>
             <div className="portfolios_divs_pr">
@@ -735,7 +773,7 @@ const Profile: React.FC = () => {
               {/* <input type="range" id="myRange" min={0} max={4} /> */}
               <div className="nol_pr">
                 <p>max</p>
-                <h1>{cardano}</h1>
+                <h1>{cardano.toFixed(3)}</h1>
               </div>
             </div>
           </div>

@@ -356,13 +356,16 @@
     padding: 17px;
     /* margin-left: 10px; */
 }
-
+:where(.css-dev-only-do-not-override-gzal6t).ant-slider .ant-slider-mark-text {
+    top: 10px !important;
+}
 .mini_txt_pr {
     margin: auto;
 }
 
 .mini_txt_pr p {
     color: #878787;
+    text-align: center;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -377,7 +380,18 @@
         flex-wrap: wrap;
         width: 100%;
     }
-
+.mini_txt_pr p{
+    text-align: left;
+    margin-bottom: 35px;
+    margin-top: 15px;
+}
+.portfolios_divs_pr{
+    padding-right: 0 !important;
+    width: 100% !important;
+}
+.p_text_pr{
+    padding-left: 0;
+}
     .Portfolio_pr,
     .Network_pr {
         padding: 15px;
