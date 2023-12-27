@@ -539,13 +539,32 @@
     line-height: 1;
     font-size: 30px;
     color: white;
+    font-weight: 500;
 }
 
 .text_portfol_pr {
     margin-left: 5px;
 }
-
-
+:where(.css-dev-only-do-not-override-gzal6t).ant-slider .ant-slider-track{
+    background-color: #FFFFFF !important;
+    height: 10px !important;
+}
+:where(.css-dev-only-do-not-override-gzal6t).ant-slider-horizontal .ant-slider-rail{
+    height: 10px !important;
+    background-color: #E9E9E933 !important;
+}
+:where(.css-dev-only-do-not-override-gzal6t).ant-slider .ant-slider-handle::after{
+    width: 20px !important;
+    height: 20px !important;
+    box-shadow: none !important;
+    z-index: 1111111;
+}
+:where(.css-dev-only-do-not-override-gzal6t).ant-slider-horizontal .ant-slider-dot{
+    top: 1px !important;
+    background-color: gray !important;
+    border: none !important;
+    z-index: 11111;
+}
 @media(max-width: 1498px) {
     .portfolios_divs_pr {
         width: 85%;
@@ -609,6 +628,10 @@
     border: none;
     cursor: pointer;
     margin-top: 30px;
+}
+
+.portfolio_mini_div_pr2 button img {
+    width: 15%;
 }
 
 .tayanch_div {
@@ -683,7 +706,7 @@
 .nol_pr h1 {
     margin-left: 25px;
     font-size: 30px;
-    color: #FFFFFF66;
+    color: #FFFFFF;
     font-weight: 500;
 }
 
@@ -698,10 +721,10 @@
     }
 
     .nol_pr {
-        width: 50%;
-        height: 30px;
-        margin: auto;
+        width: 30%;
         padding-bottom: 10px;
+        align-items: center;
+        justify-content: start;
     }
 
     .div_pr {
@@ -710,6 +733,10 @@
 
     .text_portfol_pr {
         margin-left: 10px;
+    }
+
+    .nol_pr h1 {
+        font-size: 20px;
     }
 }
 
@@ -754,12 +781,23 @@
         padding-top: 3px;
     }
 
+
     .nol_pr {
         margin: 0;
         margin-left: 10px;
         width: 40%;
         margin-top: 10px;
         margin-bottom: 5px;
+    }
+
+    .portfolio_mini_div_pr2 button {
+        height: 70px;
+    }
+
+    .p_text_pr h1 {
+        font-size: 25px;
+        padding-left: 0 !important;
+        padding-top: 0 !important;
     }
 }
 
@@ -1042,9 +1080,6 @@
         font-size: 25px;
     }
 
-    .p_text_pr h1 {
-        font-size: 25px;
-    }
 
     .p_text_pr {
         padding-left: 0;
@@ -1078,7 +1113,16 @@
         font-size: 13px;
     }
 
+    .div_pr {
+        width: 100% !important;
+    }
+
     .text_portfol_pr {
+        /* background: #000; */
+        width: 100% !important;
+    }
+
+    .text_portfol_pr p {
         width: 100% !important;
     }
 }
@@ -1119,7 +1163,11 @@
     }
 
     .Portfolio_pr {
-        width: 83%;
+        width: 93%;
+    }
+
+    .p_text_pr h1 {
+        font-size: 25px;
     }
 }
 

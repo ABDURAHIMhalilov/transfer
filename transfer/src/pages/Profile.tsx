@@ -67,14 +67,14 @@ const marks: SliderMarks = {
 const Profile: React.FC = () => {
   const [name1, setName1] = useState("");
   const [network, setNetwork] = useState("Network");
-  const [allSumm, setAllSumm] = useState(0.0);
-  const [mlSumm, setMlSumm] = useState(0.0);
-  const [bitcoin, setBitcoin] = useState(0.0201);
-  const [Etherium, setEtherium] = useState(0.1472);
-  const [BNB, setBNB] = useState(1.001);
-  const [solana, setSolana] = useState(2.35);
-  const [XRP, setXRP] = useState(78.687);
-  const [cardano, setCardano] = useState(15.42);
+  const [allSumm, setAllSumm] = useState(0);
+  const [mlSumm, setMlSumm] = useState(0);
+  const [bitcoin, setBitcoin] = useState(0);
+  const [Etherium, setEtherium] = useState(0);
+  const [BNB, setBNB] = useState(0);
+  const [solana, setSolana] = useState(0);
+  const [XRP, setXRP] = useState(0);
+  const [cardano, setCardano] = useState(0);
   const [totalSumm, setTotalSumm] = useState(0);
   useEffect(() => {
     if (bitcoin === 0.0201) {
@@ -131,19 +131,20 @@ const Profile: React.FC = () => {
     // setBitcoin(bitcoin + value);
     if (value === 0) {
       setBitcoin(0.0201);
-      // setTotalSumm(0)
+       setTotalSumm(0)
+      setBitcoin(0.0201 * 0);
     } else if (value === 25) {
       setBitcoin(0.0201 * 25);
-      // setTotalSumm(0.0201+25)
+       setTotalSumm(0.0201 * 25)
     } else if (value === 50) {
-      setTotalSumm(0.0201 * 50);
-      // setBitcoin(0.0201 + 50);
+      setBitcoin(0.0201 * 50);
+      setTotalSumm(0.0201 * 50)
     } else if (value === 75) {
-      setTotalSumm(0.0201 * 75);
-      // setBitcoin(0.0201 + 75);
+      setBitcoin(0.0201 * 75);
+      setTotalSumm(0.0201 * 75)
     } else if (value === 100) {
-      setTotalSumm(0.0201 * 100);
-      // setBitcoin(0.0201 + 100);
+      setBitcoin(0.0201 * 100);
+      setTotalSumm(0.0201 * 100)
     }
   };
 
@@ -152,8 +153,10 @@ const Profile: React.FC = () => {
     // setEtherium(bitcoin + value);
     if (value === 0) {
       setEtherium(0.1472);
+      setTotalSumm(0)
     } else if (value === 25) {
       setEtherium(0.1472 * 25);
+      setTotalSumm(0.1472 * 25)
     } else if (value === 50) {
       setEtherium(0.1472 * 50);
     } else if (value === 75) {
@@ -168,13 +171,13 @@ const Profile: React.FC = () => {
     if (value === 0) {
       setBNB(1.001);
     } else if (value === 25) {
-      setBNB(1.001 + 25);
+      setBNB(1.001 * 25);
     } else if (value === 50) {
-      setBNB(1.001 + 50);
+      setBNB(1.001 * 50);
     } else if (value === 75) {
-      setBNB(1.001 + 75);
+      setBNB(1.001 * 75);
     } else if (value === 100) {
-      setBNB(1.001 + 100);
+      setBNB(1.001 * 100);
     }
   };
 
@@ -184,13 +187,13 @@ const Profile: React.FC = () => {
     if (value === 0) {
       setSolana(2.35);
     } else if (value === 25) {
-      setSolana(2.35 + 25);
+      setSolana(2.35 * 25);
     } else if (value === 50) {
-      setSolana(2.35 + 50);
+      setSolana(2.35 * 50);
     } else if (value === 75) {
-      setSolana(2.35 + 75);
+      setSolana(2.35 * 75);
     } else if (value === 100) {
-      setSolana(2.35 + 100);
+      setSolana(2.35 * 100);
     }
   };
   const handleSliderChange5 = (value: number) => {
@@ -199,13 +202,13 @@ const Profile: React.FC = () => {
     if (value === 0) {
       setXRP(78.687);
     } else if (value === 25) {
-      setXRP(78.687 + 25);
+      setXRP(78.687 * 25);
     } else if (value === 50) {
-      setXRP(78.687 + 50);
+      setXRP(78.687 * 50);
     } else if (value === 75) {
-      setXRP(78.687 + 75);
+      setXRP(78.687 * 75);
     } else if (value === 100) {
-      setXRP(78.687 + 100);
+      setXRP(78.687 * 100);
     }
   };
   const handleSliderChange6 = (value: number) => {
@@ -214,13 +217,13 @@ const Profile: React.FC = () => {
     if (value === 0) {
       setCardano(15.42);
     } else if (value === 25) {
-      setCardano(15.42 + 25);
+      setCardano(15.42 * 25);
     } else if (value === 50) {
-      setCardano(15.42 + 50);
+      setCardano(15.42 * 50);
     } else if (value === 75) {
-      setCardano(15.42 + 75);
+      setCardano(15.42 * 75);
     } else if (value === 100) {
-      setCardano(15.42 + 100);
+      setCardano(15.42 * 100);
     }
   };
   return (
@@ -454,10 +457,10 @@ const Profile: React.FC = () => {
           >
             <img src={Img3} alt="" />
             <div className="texts5_pr">
-              <p>Etherium</p>
+              <p style={name1 == "Etherium" ? { color: "#00000099" } : {}}>Etherium</p>
               <div className="texts6_pr">
-                <h1>$1,642</h1>
-                <p>69.6%</p>
+                <h1 style={name1 == "Etherium" ? { color: "black" } : {}}>$1,642</h1>
+                <p style={name1 == "Etherium" ? { color: "#00000099" } : {}}>69.6%</p>
               </div>
             </div>
           </div>
@@ -471,10 +474,10 @@ const Profile: React.FC = () => {
           >
             <img src={Img4} alt="" />
             <div className="texts5_pr">
-              <p>Arbitrum</p>
+              <p style={name1 == "Arbitrum" ? { color: "#00000099" } : {}}>Arbitrum</p>
               <div className="texts6_pr">
-                <h1>$348</h1>
-                <p>69.6%</p>
+                <h1 style={name1 == "Arbitrum" ? { color: "black" } : {}}>$348</h1>
+                <p style={name1 == "Arbitrum" ? { color: "#00000099" } : {}}>69.6%</p>
               </div>
             </div>
           </div>
@@ -488,10 +491,10 @@ const Profile: React.FC = () => {
           >
             <img src={Img5} alt="" />
             <div className="texts5_pr">
-              <p>ZkSync</p>
+              <p style={name1 == "ZkSync" ? { color: "#00000099" } : {}}>ZkSync</p>
               <div className="texts6_pr">
-                <h1>$122</h1>
-                <p>69.6%</p>
+                <h1 style={name1 == "ZkSync" ? { color: "black" } : {}}>$122</h1>
+                <p style={name1 == "ZkSync" ? { color: "#00000099" } : {}}>69.6%</p>
               </div>
             </div>
           </div>
@@ -505,10 +508,10 @@ const Profile: React.FC = () => {
           >
             <img src={Img10} alt="" />
             <div className="texts5_pr">
-              <p>Polygon</p>
+              <p style={name1 == "Polygon" ? { color: "#00000099" } : {}}>Polygon</p>
               <div className="texts6_pr">
-                <h1>$92</h1>
-                <p>69.6%</p>
+                <h1 style={name1 == "Polygon" ? { color: "black" } : {}}>$92</h1>
+                <p style={name1 == "Polygon" ? { color: "#00000099" } : {}}>69.6%</p>
               </div>
             </div>
           </div>
@@ -522,10 +525,10 @@ const Profile: React.FC = () => {
           >
             <img src={Img6} alt="" />
             <div className="texts5_pr">
-              <p>BSC</p>
+              <p style={name1 == "BSC" ? { color: "#00000099" } : {}}>BSC</p>
               <div className="texts6_pr">
-                <h1>$56</h1>
-                <p>69.6%</p>
+                <h1 style={name1 == "BSC" ? { color: "black" } : {}}>$56</h1>
+                <p style={name1 == "BSC" ? { color: "#00000099" } : {}}>69.6%</p>
               </div>
             </div>
           </div>
@@ -539,10 +542,10 @@ const Profile: React.FC = () => {
           >
             <img src={Img7} alt="" />
             <div className="texts5_pr">
-              <p>Base</p>
+              <p style={name1 == "Base" ? { color: "#00000099" } : {}}>Base</p>
               <div className="texts6_pr">
-                <h1>$52</h1>
-                <p>69.6%</p>
+                <h1 style={name1 == "Base" ? { color: "black" } : {}}>$52</h1>
+                <p style={name1 == "Base" ? { color: "#00000099" } : {}}>69.6%</p>
               </div>
             </div>
           </div>
@@ -556,10 +559,10 @@ const Profile: React.FC = () => {
           >
             <img src={Img8} alt="" />
             <div className="texts5_pr">
-              <p>Optimism</p>
+              <p style={name1 == "Optimism" ? { color: "#00000099" } : {}}>Optimism</p>
               <div className="texts6_pr">
-                <h1>$37</h1>
-                <p>69.6%</p>
+                <h1 style={name1 == "Optimism" ? { color: "black" } : {}}>$37</h1>
+                <p style={name1 == "Optimism" ? { color: "#00000099" } : {}}>69.6%</p>
               </div>
             </div>
           </div>
@@ -580,10 +583,10 @@ const Profile: React.FC = () => {
           >
             <img src={Img10} alt="" />
             <div className="texts5_pr">
-              <p>Linea</p>
+              <p style={name1 == "Linea" ? { color: "#00000099" } : {}}>Linea</p>
               <div className="texts6_pr">
-                <h1>$12</h1>
-                <p>69.6%</p>
+                <h1 style={name1 == "Linea" ? { color: "black" } : {}}>$12</h1>
+                <p style={name1 == "Linea" ? { color: "#00000099" } : {}}>69.6%</p>
               </div>
             </div>
           </div>
